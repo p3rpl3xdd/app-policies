@@ -1,6 +1,6 @@
 # Privacy Policy for NetSketch
 
-**Last Updated: [Current Date]**
+**Last Updated: 11/09/2025**
 
 ---
 
