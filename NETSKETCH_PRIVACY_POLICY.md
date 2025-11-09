@@ -78,7 +78,7 @@ NetSketch is available worldwide. Since all data is stored locally on your devic
 If you have questions about this privacy policy or NetSketch's privacy practices, please contact us:
 
 **Email:** netsketch.prowess710@passmail.net
-**Website:** [your-website-url]
+**Website:** https://p3rpl3xdd.github.io/app-policies/NETSKETCH_PRIVACY_POLICY.md
 
 ---
 
@@ -117,4 +117,4 @@ Since NetSketch doesn't collect any personal data, compliance is straightforward
 
 ---
 
-© 2025 [Your Name/Company Name]. All rights reserved.
+© 2025 v0rpal. All rights reserved.
