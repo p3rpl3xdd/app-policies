@@ -17,3 +17,13 @@ Bug Fixes
 Changes
 
 Added export to SVG to start testing with Microsoft Visio importing.
+
+
+### Version 1.3
+
+- Added Draw tool as an alternative to the standard connection line too for better integration of Apple Pencil.
+- Refined and simplified the orthogonal routing algorithm to prevent lines going thru objects.
+- Restructured network shapes and labels to optimize line connectors and sizing issues in relation to connecting lines. Removed all padding from network shapes.
+- Adding connector line labels
+- Adding 3 new icons - AP, Printer, Internet (alternate cloud symbol)
+- Undo/Redo functionality
