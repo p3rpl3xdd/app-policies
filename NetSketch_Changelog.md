@@ -27,3 +27,8 @@ Added export to SVG to start testing with Microsoft Visio importing.
 - Adding connector line labels
 - Adding 3 new icons - AP, Printer, Internet (alternate cloud symbol)
 - Undo/Redo functionality
+
+### Version 1.4
+
+**Fix:** Text and text boxes was not formatted correctly when exporting diagrams.
+**Fix:** Autosaving was not correctly triggering on document close. A 5 second autosave was added in addition to a Save button in the top function bar. Like most software, always make sure to save before exiting the application.
