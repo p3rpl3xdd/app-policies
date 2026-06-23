@@ -165,6 +165,54 @@ PNG, PDF, and SVG exports now use the same fully shape-aware routing as the canv
 
 ---
 
+## Version 2.1 — What's New
+
+### Path Simulation
+
+**Simulate a route between any two devices**
+Tap the new Simulate button in the toolbar to enter Simulation Mode. Tap any source device, then any destination device — NetSketch finds the shortest path through the diagram's connection graph and highlights it with an animated flowing stroke.
+
+**Animated route highlight**
+Each connection on the traced path is overlaid with an animated dashed accent-coloured stroke so the route is unmistakable at a glance. Hop devices pulse with a ring to draw the eye along the path.
+
+**Hop-by-hop result panel**
+A result panel slides into the right sidebar showing the full ordered hop list — device icon, name, and type for every step — plus the total hop count. Source and destination are clearly tagged SRC and DST.
+
+**No-path detection**
+If the two devices are not connected through the diagram, the panel shows a clear "No path found" message along with the names of both devices.
+
+**Non-intrusive activation**
+Simulation Mode is activated exclusively via the toolbar button — it is not a drawing tool and cannot be triggered accidentally while placing shapes or drawing connections. The shape palette dims while the mode is active to make the boundary clear. Tap Exit (or the toolbar button again) to return to normal drawing instantly.
+
+## Version 2.2 — What's New
+
+### Path Simulation — Advanced Analysis
+
+**Connection labels in the hop list**
+When connections in your diagram have labels (such as interface identifiers or link descriptions), those labels now appear as a small pill between the corresponding hop entries in the Simulation result panel. At a glance you can read the full trace: device → interface → device → interface → destination — exactly like a real `traceroute` output, without any extra steps.
+
+**"What if this link fails?" re-routing**
+Each connection in the hop list now has a small fail toggle. Tap it to mark that link as down — NetSketch immediately re-runs the path search excluding the failed link and shows the fallback route. Excluded links are highlighted in red on the canvas with a strikethrough label, so the topology change is visible while you work. Tap the toggle again to restore the link. Use this to validate redundancy before a maintenance window or to trace what reroutes when an outage occurs.
+
+**Multiple path discovery**
+NetSketch now finds up to five distinct paths between the source and destination and presents them as a colour-coded picker at the top of the result panel. The shortest path is always Path 1 (accent colour). Additional paths use orange, purple, teal, and pink overlays. All paths are drawn on the canvas simultaneously — the selected path is shown at full brightness with the animated flowing stroke, while the others appear as thin muted strokes so you can compare routes without losing context. Switch between paths instantly with the picker.
+
+**Step-through hop animation**
+A Step Through button in the result panel header activates a presentation mode. Back and Step controls reveal the trace one hop at a time: each Step highlights the next device and the link leading to it, with a bright pulse ring on the frontier node. Previously visited hops stay visible but dim slightly. Use step-through in team walkthroughs, training sessions, or any time you need to walk a stakeholder through exactly where traffic flows — or where it stopped.
+
+---
+
+### Performance & Reliability
+
+- Simulation state is now managed by a dedicated `SimulationViewModel` — reduces re-evaluation overhead when simulation properties change during path analysis.
+- Shape and connection lookups now use dictionary indices instead of linear scans, improving responsiveness on large diagrams.
+
+---
+
+### Bug Fixes
+
+- Fixed an issue where you could not select connector lines inside of a zone. This was due to the zone object becoming a top layer object.
+
 *NetSketch is built for network engineers and IT professionals on iPad.*
 
 **Contact:** netsketch.prowess710@passmail.net
